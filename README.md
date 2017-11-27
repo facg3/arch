@@ -41,7 +41,7 @@ In Ruby everything is an object, and that’s interesting because it encourages 
 | 3. npm, the Node packaged modules has already become huge, and still growing. | 3. Without diving in depth of JavaScript if someone starts Node, he may face conceptual problem.|
 
 ## Why to use Node.js?
-. Non-blocking code
-. Fast processing
-. Easy to learn
-. Popularity and community
+- Non-blocking code
+- Fast processing
+- Easy to learn
+- Popularity and community
