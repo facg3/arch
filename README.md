@@ -33,7 +33,7 @@
 
 ## Technologies used in backend
 
-Firstly we should know that the programming language used in the backend part of a particular software or web-application determines the OS that should be installed on the server machine. For example, choosing ASP.NET will make Windows Server mandatory, although there are alternatives like Mono that would let us work with Linux, but it’s not as complete as Windows libraries. Any other language will let us work with Linux or Windows, although Linux is preferred because of its good packaging system. 
+Firstly we should know that the programming language used in the backend part of a particular software or web-application determines the OS that should be installed on the server machine. For example, choosing ASP.NET will make Windows Server mandatory, although there are alternatives like Mono that would let us work with Linux, but it’s not as complete as Windows libraries. Any other language will let us work with Linux or Windows, although Linux is preferred because of its good packaging system.
 
 ## Languages and frameworks
 
@@ -77,8 +77,58 @@ In Ruby everything is an object, and that’s interesting because it encourages 
 - Easy to learn
 - Popularity and community
 
+## 4- Writing for different environments:
+
+Why might you have to write JavaScript differently if it's going to run in the browser, rather than in Node? What tools can help bridge the gap?
+
+### Why?
+- Both Browser, and node.js are environments that runs javascript codes, but just like anyother environments, they have differences between them:
+
+### Browser Environment:
+Inside the browser, which is in the client-side, there are lots of different predefined obejcts, such like: window-global-, location and document objects, and each of them has its own functions and attributes that has to deal with the information displayed in browser, while in Node.js these objects doesn't exist!
+Also, browsers are not headless, and deal only with responses.
+
+
+### Node.js Environment:
+Node.js is the back-end server side that define how a request from the front-end (client-side) will be handled, therefore, it has it's own objects, functions and variables that do this job in a synchronuos limitless loop, and that's why in Node.js everything is modularized into small pieces that could be used when needed.
+Node.js is the way we deal with request objects, and therefore it's headless.
+
+
+### How can we run our code both sides?
+- In Coding world, nothing is impossible, therefore, there is ofcourse someways we can write, or make our JS code run both sides, in Browser environment, and Node.js's, a tool maybe? :
+
+- RequireJS: it's another tool that JS developer use to get there code optimally run in both Browser side, node.js side, and also other different environments.
+
+-- installing RequireJS:
+```
+npm install requirejs
+```
+-- Example:
+```javascript:
+var requirejs = require('requirejs');
+
+var config = {
+    baseUrl: '../appDir/scripts',
+    name: 'main',
+    out: '../build/main-built.js'
+};
+
+requirejs.optimize(config, function (buildResponse) {
+    //buildResponse is just a text output of the modules
+    //included. Load the built file for the contents.
+    //Use config.out to get the optimized file contents.
+    var contents = fs.readFileSync(config.out, 'utf8');
+}, function(err) {
+    //optimization err callback
+});
+```
+
+
+Resources:
 
 ### References
 - https://www.slideshare.net/BaabtraMentoringPartner/client-server-side-scripting           (2)
 - https://tutorialzine.com/2015/12/the-languages-and-frameworks-you-should-learn-in-2016    (3)
 - http://voidcanvas.com/describing-node-js/                                                 (3)
+- [requirejs](http://requirejs.org/docs/node.html)
+- [voidcanvas](http://voidcanvas.com/node-vs-browsers/)
