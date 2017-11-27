@@ -58,3 +58,9 @@ In Ruby everything is an object, and that’s interesting because it encourages 
 - Fast processing
 - Easy to learn
 - Popularity and community
+
+
+### References
+- https://www.slideshare.net/BaabtraMentoringPartner/client-server-side-scripting           (2)
+- https://tutorialzine.com/2015/12/the-languages-and-frameworks-you-should-learn-in-2016    (3)
+- http://voidcanvas.com/describing-node-js/                                                 (3)
