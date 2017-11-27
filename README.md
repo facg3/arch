@@ -18,7 +18,7 @@
 #### As an example of how front-end and back-end systems work together, consider a website that has different content that is accessible to users with different permissions. When a user visits the website and attempts to access a certain page, he or she will be asked to log in; that login information will be authenticated via a database lookup, and then the back-end application communicates with the front end (sometimes via an intermediary program) to display the proper page to the user.
 
 
-## What are the pros and cons of running code on the client, rather than the server (and vice versa)?
+## -2 What are the pros and cons of running code on the client, rather than the server (and vice versa)?
 
 
 ![Types of script language](images/1.jpg)
